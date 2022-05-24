@@ -4,7 +4,7 @@ import spacy
 nlp = spacy.load("en_core_web_sm")
 
 def lambda_handler(event, context):
-    text = event.get('queryStringParameters', {}).get('text')
+    text = event.get('body')
     
     print(event)
     print(type(text))
